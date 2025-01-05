@@ -1,6 +1,6 @@
 Name:          xml-commons-apis
 Version:       1.4.01
-Release:       36%{?dist}
+Release:       37%{?dist}
 Summary:       APIs for DOM, SAX, and JAXP
 License:       ASL 2.0 and W3C and Public Domain
 URL:           http://xml.apache.org/commons/
@@ -86,6 +86,9 @@ rm -rf build/docs/javadoc
 %files javadoc -f .mfiles-javadoc
 
 %changelog
+* Tue Nov 19 2024 Marián Konček <mkoncek@redhat.com> - 1.4.01-37
+- Rebuild with regenerated Requires on Java
+
 * Tue Aug 10 2021 Mohan Boddu <mboddu@redhat.com> - 1.4.01-36
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
