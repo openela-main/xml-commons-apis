@@ -1,10 +1,11 @@
 Name:          xml-commons-apis
 Version:       1.4.01
-Release:       37%{?dist}
+Release:       39%{?dist}
 Summary:       APIs for DOM, SAX, and JAXP
 License:       ASL 2.0 and W3C and Public Domain
 URL:           http://xml.apache.org/commons/
 BuildArch:     noarch
+ExclusiveArch: aarch64 ppc64le s390x x86_64 noarch
 
 # From source control because the published tarball doesn't include some docs:
 #   svn export http://svn.apache.org/repos/asf/xml/commons/tags/xml-commons-external-1_4_01/java/external/
@@ -86,6 +87,12 @@ rm -rf build/docs/javadoc
 %files javadoc -f .mfiles-javadoc
 
 %changelog
+* Sat Nov 23 2024 Marián Konček <mkoncek@redhat.com> - 1.4.01-39
+- Add noarch to ExclusiveArch
+
+* Fri Nov 22 2024 Marián Konček <mkoncek@redhat.com> - 1.4.01-38
+- Disable building on i686
+
 * Tue Nov 19 2024 Marián Konček <mkoncek@redhat.com> - 1.4.01-37
 - Rebuild with regenerated Requires on Java
 
